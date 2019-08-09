@@ -1,0 +1,20 @@
+<?php
+echo $block->sayHello();
+$collection = $block->getNewsCollection();
+?>
+<table class="table">
+    <thead>
+      <tr>
+        <th>News</th>
+        <th>Title</th>
+      </tr>
+    </thead>
+    <tbody>
+      <?php foreach($collection as $item): ?>  
+      <tr>
+        <td><?php echo $item->getNews();?></td>
+        <td><?php echo $item->getTitle();?></td>
+      </tr>
+    <?php endforeach; ?>  
+    </tbody>
+</table>
